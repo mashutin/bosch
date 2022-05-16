@@ -15,7 +15,7 @@ The ``conf.py`` file contains the following configuration parameters:
 
   The identifier of the Programmable Search Engine.
 
-You can use the pre-filled values or create your own instance of Google Programmable Search Engine and obtain an API key. For more information, see https://developers.google.com/custom-search/v1/introduction.
+You can use the pre-filled values or create your own instance of Google Programmable Search Engine and obtain an API key. For more information, see [Google custom search documentation](https://developers.google.com/custom-search/v1/introduction).
 
 ## Usage
 
@@ -38,8 +38,28 @@ where:
   This parameter is optional and defaults to *System1!*.
 
 ### Getting text search results
-<mark>GET&nbsp</mark><span style="background-color:black;color:white">&nbsp/text&nbsp</span>
+
+``GET``**/text**
+
+This method returns the first 10 text search results from Google.
+
+#### Query string parameters
+
+#### Request example
+
+#### Response example
 
 ### Getting image search results
+
+``GET``**/image**
+
+This method returns the first 10 image search results from Google.
+
+#### Query string parameters
+
+#### Request example
+
+#### Response example
+
 
 
