@@ -20,11 +20,19 @@ You can use the pre-filled values or create your own instance of Google Programm
 ## Usage
 
 ### Installing dependencies
+The application dependencies are listed in ``requirements.txt``.
+
+It is recommended to install dependencies by using a virtual environment.
+For information on creating and activating virtual environments, refer to the [Python documentation](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/).
+
+Once you have created and activated the virtual environment in the application directory, run the following command to install the dependencies:
+
+    $ python -m pip install -r requirements.txt
 
 ### Launching the application
-To launch the application, run the following command:
+To launch the application, run the following command in the application directory:
 
-    googler.py [--port <port_number>] [--login <user_name>] [--password <password>]
+    $ python googler.py [--port <port_number>] [--login <user_name>] [--password <password>]
 
 where:
 * ``port_number`` is the localhost port number to be used for the application server.
