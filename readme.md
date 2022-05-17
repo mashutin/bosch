@@ -61,7 +61,7 @@ This method returns the first 10 text search results from Google.
 
 * ``results`` *array*
   
-  Search results
+  Search results.
   * ``info`` *string*
 
     Search result description.
@@ -147,7 +147,7 @@ This method returns the first 10 image search results from Google.
 
 * ``results`` *array*
   
-  Search results
+  Search results.
   * ``context`` *string*
 
     Link to the webpage where the image is located.
