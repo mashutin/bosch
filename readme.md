@@ -46,13 +46,16 @@ where:
   This parameter is optional and defaults to *System1!*.
 
 ### Getting text search results
-``GET``**/text**
+``POST``**/text**
 
 This method returns the first 10 text search results from Google.
 
 #### Request example
 
-    curl -u admin:System1! -v http://127.0.0.1:5000/googler/api/text/jobs%20at%20bosch
+    curl -X POST \
+      -u admin:System1! \
+      -i -H "Content-Type: application/json" \
+      http://localhost:5000/googler/api/text/jobs%20at%20bosch
 
 > **ATTENTION**:
 > Don't forget to replace spaces with '%20' in the search request.
@@ -132,13 +135,16 @@ This method returns the first 10 text search results from Google.
 ```
 
 ### Getting image search results
-``GET``**/image**
+``POST``**/image**
 
 This method returns the first 10 image search results from Google.
 
 #### Request example
 
-    curl -u admin:System1! -v http://127.0.0.1:5000/googler/api/image/bavarian%20alps
+    curl -X POST \
+      -u admin:System1! \
+      -i -H "Content-Type: application/json" \
+      http://localhost:5000/googler/api/image/bavarian%20alps
 
 > **ATTENTION**:
 > Don't forget to replace spaces with '%20' in the search request.

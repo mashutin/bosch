@@ -22,7 +22,7 @@ def unauthorized():
     return make_response(jsonify({'error': 'Unauthorized access'}), 401)
 
 
-@app.route('/googler/api/text/<string:search_request>', methods=['GET'])
+@app.route('/googler/api/text/<string:search_request>', methods=['POST'])
 @auth.login_required
 def text_search(search_request):
     """Getting text search results"""
@@ -40,7 +40,7 @@ def text_search(search_request):
     return jsonify(results=items)
 
 
-@app.route('/googler/api/image/<string:search_request>', methods=['GET'])
+@app.route('/googler/api/image/<string:search_request>', methods=['POST'])
 @auth.login_required
 def image_search(search_request):
     """Getting image search results"""
