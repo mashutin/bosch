@@ -50,7 +50,6 @@ def image_search(search_request):
     items = [
         {
             "source": i['displayLink'],
-            "info": i['snippet'],
             "size": {
                 "height": i['image']['height'],
                 "width": i['image']['width']

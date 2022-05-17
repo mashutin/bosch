@@ -57,10 +57,23 @@ This method returns the first 10 text search results from Google.
 > **ATTENTION**:
 > Don't forget to replace spaces with '%20' in the search request.
 
+#### Response schema
+
+* ``results`` *array*
+  
+  Search results
+  * ``info`` *string*
+
+    Search result description.
+  * ``link`` *string*
+  
+    Link to the webpage.
+  * ``title`` *string*
+  
+    Webpage title.
+
 #### Response example
 
-<details><summary>Response example</summary>
-<p>
 ```json
 {
    "results": [
@@ -117,8 +130,6 @@ This method returns the first 10 text search results from Google.
    ]
 }
 ```
-</p>
-</details>
 
 ### Getting image search results
 ``GET``**/image**
@@ -132,13 +143,36 @@ This method returns the first 10 image search results from Google.
 > **ATTENTION**:
 > Don't forget to replace spaces with '%20' in the search request.
 
+#### Response schema
+
+* ``results`` *array*
+  
+  Search results
+  * ``context`` *string*
+
+    Link to the webpage where the image is located.
+  * ``link`` *string*
+  
+    Link to the image.
+  * ``size`` *object*
+
+    Image dimensions.
+    * ``height`` *integer*
+    
+      Image height.
+    * ``width`` *integer*
+
+      Image width.
+  * ``source`` *string*
+
+    Name of the website where the image is located.
+
 #### Response example
 ```json
 {
    "results": [
       {
          "context": "https://www.macsadventure.com/holiday-2547/bavarian-alps-hiking-the-salt-trail/",
-         "info": "Bavarian Alps: Hiking the Salt Trail | Macs Adventure",
          "link": "https://d1hirb55zrpywb.cloudfront.net/macs-adventure-tours/routes/WGSAS/routeimagegallery/1-rsz-08102019151224733.jpg",
          "size": {
             "height": 825,
@@ -148,7 +182,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.getyourguide.com/bavarian-alps-l35352/bus-minivan-tours-tc4/",
-         "info": "The BEST Bavarian Alps Bus & Minivan Tours 2022 - FREE ...",
          "link": "https://cdn.getyourguide.com/img/location/5a086edc7b91c.jpeg/99.jpg",
          "size": {
             "height": 792,
@@ -158,7 +191,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.fodors.com/world/europe/germany/the-bavarian-alps",
-         "info": "The Bavarian Alps Travel Guide - Expert Picks for your Vacation ...",
          "link": "https://www.fodors.com/assets/destinations/704815/neuschwanstein-castle-the-bavarian-alps-germany_980x650.jpg",
          "size": {
             "height": 650,
@@ -168,7 +200,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.macsadventure.com/holiday-2419/walking-in-the-bavarian-alps/",
-         "info": "Walk through the Bavarian Alps to Zugspitze | Macs Adventure",
          "link": "https://d1hirb55zrpywb.cloudfront.net/macs-adventure-tours/routes/WGSWOZ/routeimagegallery/1-rsz-08102019123830439.jpg",
          "size": {
             "height": 825,
@@ -178,7 +209,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.britannica.com/place/Bavarian-Alps",
-         "info": "Bavarian Alps | History & Facts | Britannica",
          "link": "https://cdn.britannica.com/26/99626-050-8DCE7876/Neuschwanstein-Castle-Bavarian-Alps-Germany.jpg",
          "size": {
             "height": 1466,
@@ -188,7 +218,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.youtube.com/watch?v=WM2_qnWENxA",
-         "info": "The Top Place to Visit in Germany!! (Bavarian Alps is breathtaking ...",
          "link": "https://i.ytimg.com/vi/WM2_qnWENxA/maxresdefault.jpg",
          "size": {
             "height": 720,
@@ -198,7 +227,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.britannica.com/place/Bavarian-Alps",
-         "info": "Bavarian Alps | History & Facts | Britannica",
          "link": "https://cdn.britannica.com/26/99626-050-8DCE7876/Neuschwanstein-Castle-Bavarian-Alps-Germany.jpg?w=300&h=169&c=crop",
          "size": {
             "height": 169,
@@ -208,7 +236,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.grayline.com/tours/salzburg/bavarian-alps-11862_9_12130_943/",
-         "info": "large.jpg",
          "link": "https://cdn.tourcms.com/a/11676/943/1/large.jpg",
          "size": {
             "height": 1000,
@@ -218,7 +245,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.istockphoto.com/photos/bavarian-alps",
-         "info": "34,114 Bavarian Alps Stock Photos, Pictures & Royalty-Free Images ...",
          "link": "https://media.istockphoto.com/photos/idyllic-landscape-in-the-alps-with-grazing-cows-in-summer-picture-id537406916?k=20&m=537406916&s=612x612&w=0&h=k_V1j2sJgl1rAMvoLGBSMJU49bonp2NDyZUJkgs1TCg=",
          "size": {
             "height": 407,
@@ -228,7 +254,6 @@ This method returns the first 10 image search results from Google.
       },
       {
          "context": "https://www.getyourguide.com/bayerische-alpen-l35352/aktivitaeten-tc54/?categoriesNavigationId=54",
-         "info": "Bavarian Alps Activities | GetYourGuide",
          "link": "https://cdn.getyourguide.com/img/location/5a086edc7b91c.jpeg/88.jpg",
          "size": {
             "height": 1350,
