@@ -25,11 +25,11 @@ The application dependencies are listed in ``requirements.txt``.
 It is recommended to install dependencies by using a virtual environment.
 For information on creating and activating virtual environments, refer to the [Python documentation](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/).
 
-Once you have created and activated the virtual environment in the application directory, run the following command to install the dependencies:
+Once you have created and activated a virtual environment in the application directory, run the following command to install the dependencies:
 
     $ python -m pip install -r requirements.txt
 
-### Launching the application
+### Launching application
 To launch the application, run the following command in the application directory:
 
     $ python googler.py [--port <port_number>] [--login <user_name>] [--password <password>]
@@ -58,6 +58,9 @@ This method returns the first 10 text search results from Google.
 > Don't forget to replace spaces with '%20' in the search request.
 
 #### Response example
+
+<details><summary>Response example</summary>
+<p>
 ```json
 {
    "results": [
@@ -114,6 +117,9 @@ This method returns the first 10 text search results from Google.
    ]
 }
 ```
+</p>
+</details>
+
 ### Getting image search results
 ``GET``**/image**
 
