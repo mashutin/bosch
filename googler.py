@@ -49,7 +49,7 @@ def image_search(search_request):
         &key={conf.api_key} &num=10")
     items = [
         {
-            "title": i['displayLink'],
+            "source": i['displayLink'],
             "info": i['snippet'],
             "size": {
                 "height": i['image']['height'],
