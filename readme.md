@@ -1,5 +1,5 @@
 # Googler
-Googler is an absolutely useless application made for test purpose.
+Googler is an application created for testing purposes.
 
 ## Prerequisites
 * Python 3 with pip
